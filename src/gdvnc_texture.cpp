@@ -242,7 +242,7 @@ bool GDVNC_Texture::update(float p_delta) {
 
 bool GDVNC_Texture::updateMouseState(int p_x, int p_y, int p_mask) {
 	if (is_connected && (rfbCl!=NULL)) {
-		int mask;
+		int mask = 0;
 
 		// middle and right buttons are reversed
 		if ((p_mask & 1) == 1) {
