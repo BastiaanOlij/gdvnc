@@ -172,8 +172,8 @@ bool GDVNC_Texture::connect(String p_host, String p_password) {
 	} else {
 		printf("Failure\n");
 
-		// cleanup...
-		disconnect();
+		// failure on rfbInitClient will clear our rfbCl already so make this NULL...
+		rfbCl = NULL;
 		return false;
 	}
 }
