@@ -19,7 +19,7 @@ func _ready():
 	
 	# this returns true on a successful connect
 	vnc.connect("192.168.1.3", "test")
-	vnc.set_target_fps(30.0)
+	vnc.set_target_fps(15.0)
 
 func _process(delta):
 	# work around to get around not having an update process...
